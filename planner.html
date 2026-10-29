@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mativa - student portfolio and academic planner of Adaora Okalu.">
+  <title>Academic Planner | Mativa</title>
+  <!-- Google Fonts (optional - the site still works offline with fallback fonts) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Nunito:wght@400;700&display=swap">
+  <!-- Our external stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- ===== HEADER & NAVIGATION (same on every page) ===== -->
+  <header>
+    <nav class="container nav-bar">
+      <a href="index.html" class="logo">Mat<span>iva</span></a>
+      <!-- Hamburger button for mobile screens -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+      <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="planner.html" class="active">Academic Planner</a></li>
+          <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Page banner -->
+    <section class="page-banner">
+      <div class="container fade-in">
+        <h1>Academic <span>Planner</span></h1>
+        <p>Organise assignments, revision and exams in one place.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container planner-grid">
+        <!-- Task area -->
+        <article class="card">
+          <h2>📝 My Tasks</h2>
+          <div class="task-form">
+            <input type="text" id="taskInput" placeholder="e.g. Finish CSC 101 assignment" aria-label="Task">
+            <select id="taskCategory" aria-label="Task category">
+              <option>Assignment</option>
+              <option>Revision</option>
+              <option>Examination</option>
+              <option>Personal</option>
+            </select>
+            <button class="btn btn-primary" id="addTaskBtn">Add Task</button>
+          </div>
+          <p class="error" id="taskError"></p>
+          <!-- JavaScript fills this list -->
+          <ul class="task-list" id="taskList"></ul>
+        </article>
+
+        <!-- Sidebar: stats and study tip -->
+        <aside>
+          <div class="planner-stats">
+            <div><strong id="totalTasks">0</strong>Total Tasks</div>
+            <div><strong id="completedTasks">0</strong>Completed</div>
+          </div>
+          <div class="tip-box">
+            <h3>💡 Study Tip of the Day</h3>
+            <p id="tipText">Loading tip...</p>
+            <button class="btn btn-primary" id="newTipBtn">New Tip</button>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER (same on every page) ===== -->
+  <footer>
+    <div class="container footer-inner">
+      <p>&copy; <span id="year">2026</span> Adaora Okalu &middot; Mativa. All rights reserved.</p>
+      <div class="socials">
+        <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://x.com" target="_blank" rel="noopener">X</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Our JavaScript file (loaded at the end so the page loads first) -->
+  <script src="js/script.js"></script>
+</body>
+</html>

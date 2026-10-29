@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mativa - student portfolio and academic planner of Adaora Okalu.">
+  <title>Home | Mativa</title>
+  <!-- Google Fonts (optional - the site still works offline with fallback fonts) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Nunito:wght@400;700&display=swap">
+  <!-- Our external stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- ===== HEADER & NAVIGATION (same on every page) ===== -->
+  <header>
+    <nav class="container nav-bar">
+      <a href="index.html" class="logo">Mat<span>iva</span></a>
+      <!-- Hamburger button for mobile screens -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+      <ul class="nav-links" id="navLinks">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="planner.html">Academic Planner</a></li>
+          <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== HERO SECTION (two columns on large screens) ===== -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text fade-in">
+          <span class="tag">👋 Welcome to my space</span>
+          <h1>Adaora Okalu</h1>
+          <h2>Software Engineering Student</h2>
+          <p>Welcome to Mativa - my digital home for projects, learning and planning my academic journey.</p>
+          <p>I am a curious first-year student who loves turning ideas into simple, useful websites. I enjoy solving problems, learning new technologies and building tools that make student life easier.</p>
+          <div class="hero-buttons">
+            <a href="projects.html" class="btn btn-primary">View My Projects</a>
+            <a href="planner.html" class="btn btn-outline">Plan My Studies</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="images/profile.jpg" alt="Profile photograph of Adaora Okalu" width="420" height="420">
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== STATISTICS SECTION ===== -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">At a Glance</h2>
+        <p class="section-sub">A quick look at my journey so far.</p>
+        <div class="stats-grid">
+          <article class="card stat"><div class="stat-number">3</div><p>Completed Projects</p></article>
+          <article class="card stat"><div class="stat-number">4</div><p>Academic Interests</p></article>
+          <article class="card stat"><div class="stat-number">1</div><p>Career Goal</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MULTIMEDIA SECTION (HTML5 audio) ===== -->
+    <section style="padding-top:0">
+      <div class="container">
+        <article class="card media-box">
+          <h2>🎧 Study Music</h2>
+          <p>Press play for some calm background music while you study or plan your week: 'Love Story x Golden Brown' - piano (by Valentino Coleman).</p>
+          <!-- Official Apple Music player for the song -->
+          <iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="150" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" src="https://embed.music.apple.com/us/album/love-story-x-golden-brown-piano-single/1865486045"></iframe>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER (same on every page) ===== -->
+  <footer>
+    <div class="container footer-inner">
+      <p>&copy; <span id="year">2026</span> Adaora Okalu &middot; Mativa. All rights reserved.</p>
+      <div class="socials">
+        <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://x.com" target="_blank" rel="noopener">X</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Our JavaScript file (loaded at the end so the page loads first) -->
+  <script src="js/script.js"></script>
+</body>
+</html>

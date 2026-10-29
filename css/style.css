@@ -1,0 +1,241 @@
+/* =========================================================
+   MATIVA - Main Stylesheet
+   Colour scheme: black, light blue and white.
+   Change the variables below to re-theme the whole site.
+   ========================================================= */
+
+/* ---------- 1. Colour & spacing variables ---------- */
+:root {
+  --black: #0d0f14;
+  --dark: #1c2230;
+  --blue: #8fd3ff;
+  --blue-soft: #e6f5ff;
+  --blue-deep: #2b9be0;
+  --white: #ffffff;
+  --grey: #5b6474;
+  --red: #e0475b;
+  --green: #22a565;
+  --radius: 18px;
+  --shadow: 0 10px 30px rgba(13, 15, 20, 0.08);
+  --shadow-hover: 0 18px 40px rgba(13, 15, 20, 0.16);
+  --font-head: "Poppins", "Segoe UI", Arial, sans-serif;
+  --font-body: "Nunito", "Segoe UI", Arial, sans-serif;
+}
+
+/* ---------- 2. Basic reset ---------- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  color: var(--black);
+  background: var(--white);
+  line-height: 1.6;
+}
+img { max-width: 100%; display: block; }
+a { color: var(--blue-deep); }
+h1, h2, h3 { font-family: var(--font-head); line-height: 1.2; }
+
+/* A centred content wrapper used on every page */
+.container { width: 90%; max-width: 1100px; margin: 0 auto; }
+section { padding: 70px 0; }
+.section-title { font-size: 2rem; margin-bottom: 10px; }
+.section-sub { color: var(--grey); margin-bottom: 35px; }
+
+/* ---------- 3. Sticky header & navigation ---------- */
+header {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--black);
+}
+.nav-bar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 0;
+}
+.logo {
+  font-family: var(--font-head); font-weight: 700; font-size: 1.5rem;
+  color: var(--white); text-decoration: none;
+}
+.logo span { color: var(--blue); }
+.nav-links { display: flex; gap: 8px; list-style: none; }
+.nav-links a {
+  color: var(--white); text-decoration: none; padding: 8px 14px;
+  border-radius: 999px; transition: background 0.3s, color 0.3s;
+}
+.nav-links a:hover, .nav-links a.active { background: var(--blue); color: var(--black); }
+
+/* Hamburger button (only shown on small screens) */
+.menu-toggle {
+  display: none; background: none; border: 2px solid var(--blue);
+  color: var(--blue); font-size: 1.4rem; border-radius: 10px;
+  padding: 4px 12px; cursor: pointer;
+}
+
+/* ---------- 4. Buttons ---------- */
+.btn {
+  display: inline-block; padding: 12px 26px; border-radius: 999px;
+  font-weight: 700; text-decoration: none; border: 2px solid var(--black);
+  cursor: pointer; font-size: 1rem; font-family: var(--font-body);
+  transition: transform 0.25s, background 0.25s, color 0.25s, box-shadow 0.25s;
+}
+.btn-primary { background: var(--black); color: var(--white); }
+.btn-primary:hover { background: var(--blue); color: var(--black); transform: translateY(-3px); box-shadow: var(--shadow-hover); }
+.btn-outline { background: transparent; color: var(--black); }
+.btn-outline:hover { background: var(--black); color: var(--white); transform: translateY(-3px); }
+
+/* ---------- 5. Hero section (two columns with Grid) ---------- */
+.hero {
+  background: linear-gradient(135deg, var(--blue-soft), var(--white));
+  padding: 80px 0;
+}
+.hero-grid {
+  display: grid; grid-template-columns: 1.2fr 1fr; gap: 50px; align-items: center;
+}
+.tag {
+  display: inline-block; background: var(--blue); color: var(--black);
+  padding: 6px 16px; border-radius: 999px; font-weight: 700; margin-bottom: 16px;
+}
+.hero h1 { font-size: 3rem; margin-bottom: 10px; }
+.hero h2 { font-size: 1.4rem; color: var(--blue-deep); margin-bottom: 18px; }
+.hero p { color: var(--grey); margin-bottom: 14px; }
+.hero-buttons { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 24px; }
+.hero-image img {
+  border-radius: 50% 50% 30px 30px; border: 6px solid var(--black);
+  box-shadow: 18px 18px 0 var(--blue);
+  animation: float 4s ease-in-out infinite; /* simple animation */
+}
+
+/* The floating animation used on the profile photo */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+/* Fade-in animation used on page content */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-in { animation: fadeUp 0.8s ease both; }
+
+/* ---------- 6. Cards & grids ---------- */
+.card {
+  background: var(--white); border-radius: var(--radius); padding: 28px;
+  box-shadow: var(--shadow); transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); }
+
+.stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.stat { text-align: center; border-top: 5px solid var(--blue); }
+.stat-number { font-family: var(--font-head); font-size: 3rem; font-weight: 700; }
+.stat p { color: var(--grey); }
+
+.two-col { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+
+/* Page banner used at the top of inner pages */
+.page-banner { background: var(--black); color: var(--white); padding: 60px 0; text-align: center; }
+.page-banner h1 { font-size: 2.6rem; }
+.page-banner h1 span { color: var(--blue); }
+.page-banner p { color: #c9d3e0; }
+
+/* ---------- 7. Skill progress bars ---------- */
+.skill { margin-bottom: 20px; }
+.skill-label { display: flex; justify-content: space-between; font-weight: 700; margin-bottom: 6px; }
+.bar { background: var(--blue-soft); border-radius: 999px; height: 14px; overflow: hidden; }
+.bar-fill {
+  height: 100%; background: linear-gradient(90deg, var(--blue-deep), var(--blue));
+  border-radius: 999px; width: 0; transition: width 1.5s ease; /* animated by JS */
+}
+
+/* ---------- 8. Table ---------- */
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+th { background: var(--black); color: var(--white); }
+th, td { padding: 14px 18px; text-align: left; }
+td { background: var(--blue-soft); }
+
+.hobby-list { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; }
+.hobby-list li { background: var(--blue-soft); padding: 8px 16px; border-radius: 999px; }
+
+.media-box audio { width: 100%; margin-top: 14px; }
+
+/* ---------- 9. Project cards ---------- */
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; }
+.project-card { padding: 0; overflow: hidden; display: flex; flex-direction: column; }
+.project-card img { height: 190px; width: 100%; object-fit: cover; transition: transform 0.4s; }
+.project-card:hover img { transform: scale(1.06); }
+.project-body { padding: 24px; display: flex; flex-direction: column; gap: 12px; flex: 1; }
+.tech { display: flex; flex-wrap: wrap; gap: 6px; }
+.tech span { background: var(--black); color: var(--blue); font-size: 0.8rem; padding: 4px 10px; border-radius: 999px; }
+.project-body .btn { margin-top: auto; align-self: flex-start; }
+
+/* ---------- 10. Academic planner ---------- */
+.planner-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 28px; align-items: start; }
+.task-form { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; }
+.task-form input, .task-form select { flex: 1 1 180px; }
+input, select, textarea {
+  padding: 12px 14px; border: 2px solid #d6e2ee; border-radius: 12px;
+  font-size: 1rem; font-family: var(--font-body); transition: border-color 0.2s;
+}
+input:focus, select:focus, textarea:focus { outline: none; border-color: var(--blue-deep); }
+
+.task-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.task-item {
+  display: flex; align-items: center; gap: 12px; padding: 14px 16px;
+  background: var(--blue-soft); border-radius: 14px; animation: fadeUp 0.4s ease;
+}
+.task-text { flex: 1; }
+.task-item.completed .task-text { text-decoration: line-through; color: var(--grey); }
+.category { font-size: 0.75rem; background: var(--black); color: var(--blue); padding: 3px 10px; border-radius: 999px; }
+.small-btn { border: none; border-radius: 10px; padding: 6px 12px; cursor: pointer; font-weight: 700; transition: transform 0.2s, opacity 0.2s; }
+.small-btn:hover { transform: scale(1.08); }
+.complete-btn { background: var(--green); color: var(--white); }
+.delete-btn { background: var(--red); color: var(--white); }
+.empty-message { text-align: center; color: var(--grey); padding: 30px; border: 2px dashed var(--blue); border-radius: 14px; }
+
+.planner-stats { display: flex; gap: 14px; margin-bottom: 20px; }
+.planner-stats div { flex: 1; text-align: center; background: var(--black); color: var(--white); border-radius: 14px; padding: 16px; }
+.planner-stats strong { display: block; font-size: 2rem; color: var(--blue); }
+.tip-box { background: var(--blue); border-radius: var(--radius); padding: 24px; }
+.tip-box p { margin: 10px 0 16px; font-style: italic; }
+
+/* ---------- 11. Contact form ---------- */
+.contact-form { display: flex; flex-direction: column; gap: 18px; }
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+.form-group label { font-weight: 700; }
+.form-group.invalid input, .form-group.invalid textarea { border-color: var(--red); }
+.error { color: var(--red); font-size: 0.9rem; min-height: 1em; }
+.success-message {
+  display: none; background: #e3f8ec; color: var(--green); border-radius: 12px;
+  padding: 14px; font-weight: 700;
+}
+.success-message.show { display: block; animation: fadeUp 0.5s ease; }
+
+/* ---------- 12. Footer ---------- */
+footer { background: var(--black); color: #c9d3e0; padding: 36px 0; }
+.footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+.socials { display: flex; gap: 12px; }
+.socials a {
+  color: var(--white); text-decoration: none; border: 1px solid var(--blue);
+  padding: 6px 14px; border-radius: 999px; transition: background 0.3s, color 0.3s;
+}
+.socials a:hover { background: var(--blue); color: var(--black); }
+
+/* ---------- 13. Responsive design ---------- */
+/* Tablet */
+@media (max-width: 900px) {
+  .hero-grid, .planner-grid, .two-col { grid-template-columns: 1fr; }
+  .hero-image { max-width: 360px; margin: 0 auto; }
+  .hero h1 { font-size: 2.4rem; }
+}
+/* Mobile */
+@media (max-width: 700px) {
+  .menu-toggle { display: block; }
+  .nav-links {
+    display: none; position: absolute; top: 100%; left: 0; right: 0;
+    flex-direction: column; background: var(--black); padding: 10px 5% 20px;
+  }
+  .nav-links.open { display: flex; } /* added by JavaScript */
+  .stats-grid { grid-template-columns: 1fr; }
+  .hero { text-align: center; }
+  .hero-buttons { justify-content: center; }
+  .footer-inner { flex-direction: column; text-align: center; }
+  section { padding: 50px 0; }
+}

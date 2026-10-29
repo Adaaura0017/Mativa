@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mativa - student portfolio and academic planner of Adaora Okalu.">
+  <title>About Me | Mativa</title>
+  <!-- Google Fonts (optional - the site still works offline with fallback fonts) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Nunito:wght@400;700&display=swap">
+  <!-- Our external stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- ===== HEADER & NAVIGATION (same on every page) ===== -->
+  <header>
+    <nav class="container nav-bar">
+      <a href="index.html" class="logo">Mat<span>iva</span></a>
+      <!-- Hamburger button for mobile screens -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+      <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About Me</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="planner.html">Academic Planner</a></li>
+          <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Page banner -->
+    <section class="page-banner">
+      <div class="container fade-in">
+        <h1>About <span>Me</span></h1>
+        <p>Get to know my studies, goals and interests.</p>
+      </div>
+    </section>
+
+    <!-- Education and career -->
+    <section>
+      <div class="container two-col">
+        <article class="card fade-in">
+          <h2>🎓 Educational Background</h2>
+          <p>I am currently a 100 Level Software Engineering student at Miva Open University. Before university, I completed my secondary education with a strong focus on Mathematics, Physics and Data Processing.</p>
+        </article>
+        <article class="card fade-in">
+          <h2>🚀 Career Aspirations</h2>
+          <p>My goal is to become a full-stack web developer who builds accessible, helpful tools for students and small businesses across Africa.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Technical skills with progress bars -->
+    <section style="padding-top:0">
+      <div class="container">
+        <h2 class="section-title">Technical Skills</h2>
+        <p class="section-sub">Skills I am building every day.</p>
+        <div class="card">
+          <!-- data-level is read by JavaScript to fill each bar -->
+          <div class="skill"><div class="skill-label"><span>HTML</span><span>85%</span></div><div class="bar"><div class="bar-fill" data-level="85"></div></div></div>
+          <div class="skill"><div class="skill-label"><span>CSS</span><span>75%</span></div><div class="bar"><div class="bar-fill" data-level="75"></div></div></div>
+          <div class="skill"><div class="skill-label"><span>JavaScript</span><span>60%</span></div><div class="bar"><div class="bar-fill" data-level="60"></div></div></div>
+          <div class="skill"><div class="skill-label"><span>Problem Solving</span><span>80%</span></div><div class="bar"><div class="bar-fill" data-level="80"></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Academic information table -->
+    <section style="padding-top:0">
+      <div class="container">
+        <h2 class="section-title">Academic Information</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Programme</th><th>Level</th><th>Institution</th><th>Interest</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Software Engineering</td><td>100 Level</td><td>Miva Open University</td><td>Web Development</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hobbies and multimedia -->
+    <section style="padding-top:0">
+      <div class="container two-col">
+        <article class="card">
+          <h2>🎨 Hobbies and Interests</h2>
+          <ul class="hobby-list">
+            <li>Reading tech blogs</li>
+            <li>Designing websites</li>
+            <li>Playing game</li>
+            <li>Listening to music</li>
+            <li>Photography</li>
+          </ul>
+        </article>
+        <article class="card media-box">
+          <h2>🎧 My Study Playlist</h2>
+          <p>This is the kind of calm music I listen to when I code: 'Love Story x Golden Brown' - piano (by Valentino Coleman).</p>
+          <!-- Official Apple Music player for the song -->
+          <iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="150" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" src="https://embed.music.apple.com/us/album/love-story-x-golden-brown-piano-single/1865486045"></iframe>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER (same on every page) ===== -->
+  <footer>
+    <div class="container footer-inner">
+      <p>&copy; <span id="year">2026</span> Adaora Okalu &middot; Mativa. All rights reserved.</p>
+      <div class="socials">
+        <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://x.com" target="_blank" rel="noopener">X</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Our JavaScript file (loaded at the end so the page loads first) -->
+  <script src="js/script.js"></script>
+</body>
+</html>
